@@ -70,17 +70,23 @@ $conn->close();
         <?php if ($message) echo "<p class='message'>$message</p>"; ?>
         <?php if ($matric && $name): ?>
         <form method="post" action="">
-            <label for="matric">Matric Number:</label>
-            <input type="text" name="matric" value="<?php echo htmlspecialchars($matric); ?>" required><br><br>
-            
-            <label for="name">Name:</label>
-            <input type="text" name="name" value="<?php echo htmlspecialchars($name); ?>" required><br><br>
+            <div class="form-group">
+                <label for="matric">Matric Number:</label>
+                <input type="text" id="matric" name="matric" value="<?php echo htmlspecialchars($matric); ?>" required><br><br>
+            </div>
 
-            <label for="role">Role:</label>
-            <select name="role" required>
-                <option value="admin" <?php if ($role === "admin") echo "selected"; ?>>Admin</option>
-                <option value="user" <?php if ($role === "user") echo "selected"; ?>>User</option>
-            </select><br><br>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($name); ?>" required><br><br>
+            </div>
+
+            <div class="form-group">
+                <label for="role">Role:</label>
+                <select id="role" name="role" required>
+                    <option value="admin" <?php if ($role === "admin") echo "selected"; ?>>Admin</option>
+                    <option value="user" <?php if ($role === "user") echo "selected"; ?>>User</option>
+                </select><br><br>
+            </div>
 
             <button type="submit">Update</button>
             <a href="display.php" class="button" style="margin-left: 10px;">Back</a>

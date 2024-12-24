@@ -49,15 +49,36 @@ $conn->close();
     <title>Login</title>
     <link rel="stylesheet" href="layout.css">
 </head>
-<body>
-    <div class="container">
-        <h1>Login</h1>
-        <form method="post" action="">
-            <input type="text" name="matric" placeholder="Matric Number" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-        <?php if (isset($error)) { echo "<p class='error'>$error</p>"; } ?>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Login</h3>
+                    </div>
+                    <div class="card-body">
+                        <?php if ($error_message): ?>
+                            <div class="alert alert-danger"><?= $error_message ?></div>
+                        <?php endif; ?>
+                        <form method="POST" action="">
+                            <div class="mb-3">
+                                <label for="matric" class="form-label">Matric</label>
+                                <input type="text" class="form-control" id="matric" name="matric" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Login</button>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <p>Don't have an account? <a href="register.php">Register here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
