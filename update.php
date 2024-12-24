@@ -25,7 +25,6 @@ if ($matric) {
     $result = $stmt->get_result();
     if ($result->num_rows === 1) {
         $user = $result->fetch_assoc();
-        $matric = $user['matric'];
         $name = $user['name'];
         $role = $user['role'];
     } else {
@@ -36,16 +35,17 @@ if ($matric) {
 
 // Update user details on form submission
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $matric = $_POST['matric'];
+    $new_matric = $_POST['matric']; // Get new matric from form
     $name = $_POST['name'];
     $role = $_POST['role'];
 
-    $sql = "UPDATE users SET matric =?, name = ?, role = ? WHERE matric = ?";
+    $sql = "UPDATE users SET matric = ?, name = ?, role = ? WHERE matric = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sss", $name, $role, $matric);
+    $stmt->bind_param("ssss", $new_matric, $name, $role, $matric);
 
     if ($stmt->execute()) {
         $message = "User updated successfully!";
+        $matric = $new_matric; // Update current matric variable
     } else {
         $message = "Error updating user: " . $stmt->error;
     }
@@ -72,7 +72,7 @@ $conn->close();
         <form method="post" action="">
             <label for="matric">Matric Number:</label>
             <input type="text" name="matric" value="<?php echo htmlspecialchars($matric); ?>" required><br><br>
-
+            
             <label for="name">Name:</label>
             <input type="text" name="name" value="<?php echo htmlspecialchars($name); ?>" required><br><br>
 
@@ -83,7 +83,7 @@ $conn->close();
             </select><br><br>
 
             <button type="submit">Update</button>
-            <a href="display.php" class="button button-back" style="margin-left: 10px;">Back</a>
+            <a href="display.php" class="button" style="margin-left: 10px;">Back</a>
         </form>
         <?php else: ?>
             <p>No user selected for update.</p>
@@ -91,4 +91,3 @@ $conn->close();
     </div>
 </body>
 </html>
-
