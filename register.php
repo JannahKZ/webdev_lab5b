@@ -70,6 +70,7 @@ $conn->close();
                                 <select name="role" required>
                                     <option value="admin">Admin</option>
                                     <option value="user">User</option>
+                                </select>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Register</button>
                         </form>
