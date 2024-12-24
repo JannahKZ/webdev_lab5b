@@ -1,3 +1,35 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('cat.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* Header Styles */
+h1 {
+    font-size: 2.5rem; 
+    margin-bottom: 20px;
+    color: #fff;
+}
+
 /* Form Styles */
 form {
     text-align: center;
@@ -43,7 +75,7 @@ a.button-delete:hover {
     background-color: #c82333;
 }
 
-/* Delete Button - Red */
+/* Back Button - Red */
 a.button-back {
     background-color: #dc3545;
 }
@@ -76,43 +108,12 @@ th {
 
 td .button-container {
     display: flex;
-    gap: 5px; /* Space between buttons */
-    justify-content: start; /* Align buttons to the left */
+    gap: 5px; 
+    justify-content: start; 
 }
 
 /* Error Messages */
 .error {
     color: #ff6b6b;
     text-align: center;
-}
-/* General Styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: url('cat.jpg') no-repeat center center fixed; /* Replace 'cat.jpg' with your image file */
-    background-size: cover;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-/* Container */
-.container {
-    width: 90%;
-    max-width: 500px;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 40px;
-    border-radius: 10px;
-    margin: 10px auto;
-    text-align: center;
-}
-
-/* Header Styles */
-h1 {
-    font-size: 2.5rem; /* Bigger text for the title */
-    margin-bottom: 20px;
-    color: #fff;
 }

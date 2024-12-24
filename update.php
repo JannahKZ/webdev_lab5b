@@ -35,7 +35,7 @@ if ($matric) {
 
 // Update user details on form submission
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $new_matric = $_POST['matric']; // Get new matric from form
+    $new_matric = $_POST['matric']; 
     $name = $_POST['name'];
     $role = $_POST['role'];
 
@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($stmt->execute()) {
         $message = "User updated successfully!";
-        $matric = $new_matric; // Update current matric variable
+        $matric = $new_matric; 
     } else {
         $message = "Error updating user: " . $stmt->error;
     }
