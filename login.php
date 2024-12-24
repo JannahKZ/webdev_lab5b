@@ -56,18 +56,25 @@ $conn->close();
                 <div class="card">
                     <div class="card-header text-center">
                         <h1>Login</h1>
-                    <form method="post" action="">
-                        <input type="text" name="matric" placeholder="Matric Number" required>
-                        <input type="password" name="password" placeholder="Password" required>
-                        <button type="submit">Login</button>
-                    </form>
-                    <?php if (isset($error)) { echo "<p class='error'>$error</p>"; } ?>
-                 </div>
-                <div class="card-footer text-center">
-                <p>Don't have an account? <a href="register.php">Register here</a></p>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="matric" placeholder="Matric Number" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control" name="password" placeholder="Password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Login</button>
+                        </form>
+                        <?php if (isset($error)) { echo "<p class='error text-danger mt-3 text-center'>$error</p>"; } ?>
+                    </div>
+                    <div class="card-footer text-center">
+                        <p>Don't have an account? <a href="register.php">Register here</a></p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>                
+    </div>
 </body>
-</html> 
+</html>
