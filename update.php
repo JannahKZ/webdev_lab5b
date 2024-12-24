@@ -89,7 +89,7 @@ $conn->close();
             </div>
 
             <button type="submit">Update</button>
-            <a href="display.php" class="button" style="margin-left: 10px;">Back</a>
+            <a href="display.php" class="button button-back" style="margin-left: 10px;">Back</a>
         </form>
         <?php else: ?>
             <p>No user selected for update.</p>
