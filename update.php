@@ -25,6 +25,7 @@ if ($matric) {
     $result = $stmt->get_result();
     if ($result->num_rows === 1) {
         $user = $result->fetch_assoc();
+        $matric = $user['matric'];
         $name = $user['name'];
         $role = $user['role'];
     } else {
@@ -35,10 +36,11 @@ if ($matric) {
 
 // Update user details on form submission
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $matric = $_POST['matric'];
     $name = $_POST['name'];
     $role = $_POST['role'];
 
-    $sql = "UPDATE users SET name = ?, role = ? WHERE matric = ?";
+    $sql = "UPDATE users SET matric =?, name = ?, role = ? WHERE matric = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sss", $name, $role, $matric);
 
