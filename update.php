@@ -76,12 +76,12 @@ $conn->close();
             </div>
 
             <div class="form-group">
-                <label for="name">Name:</label>
+                <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($name); ?>" required><br><br>
             </div>
 
             <div class="form-group">
-                <label for="role">Role:</label>
+                <label for="role">Role:</label><br>
                 <select id="role" name="role" required>
                     <option value="admin" <?php if ($role === "admin") echo "selected"; ?>>Admin</option>
                     <option value="user" <?php if ($role === "user") echo "selected"; ?>>User</option>
