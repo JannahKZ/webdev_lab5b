@@ -68,6 +68,9 @@ $conn->close();
         <?php if ($message) echo "<p class='message'>$message</p>"; ?>
         <?php if ($matric && $name): ?>
         <form method="post" action="">
+            <label for="matric">Matric Number:</label>
+            <input type="text" name="matric" value="<?php echo htmlspecialchars($matric); ?>" required><br><br>
+
             <label for="name">Name:</label>
             <input type="text" name="name" value="<?php echo htmlspecialchars($name); ?>" required><br><br>
 
