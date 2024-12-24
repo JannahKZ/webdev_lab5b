@@ -44,7 +44,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L O G I N</title>
+    <title>Registration</title>
     <link rel="stylesheet" href="layout.css">
 </head>
 <body class="bg-light">
@@ -53,7 +53,7 @@ $conn->close();
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header text-center">
-                        <h1>Login</h1>
+                        <h1>Register</h1>
                     </div>
                     <div class="card-body">
                         <form method="post" action="">
@@ -82,22 +82,5 @@ $conn->close();
             </div>
         </div>
     </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
-    <link rel="stylesheet" href="layout.css">
-</head>
-<body>
-    <h1>Register</h1>
-    <form method="post" action="">
-
-
-        <button type="submit">Register</button>
-    </form>
 </body>
 </html>
