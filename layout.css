@@ -1,0 +1,109 @@
+/* Form Styles */
+form {
+    text-align: center;
+}
+
+input[type="text"], input[type="password"], select {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+button, a.button {
+    padding: 5px 10px;
+    background-color: #28a745;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+/* Update Button - Green */
+a.button-update {
+    background-color: #28a745;
+    margin-right: 5px;
+}
+
+a.button-update:hover {
+    background-color: #218838;
+}
+
+/* Delete Button - Red */
+a.button-delete {
+    background-color: #dc3545;
+}
+
+a.button-delete:hover {
+    background-color: #c82333;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #444;
+    color: #fff;
+}
+
+td .button-container {
+    display: flex;
+    gap: 5px; /* Space between buttons */
+    justify-content: start; /* Align buttons to the left */
+}
+
+/* Error Messages */
+.error {
+    color: #ff6b6b;
+    text-align: center;
+}
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('cat.jpg') no-repeat center center fixed; /* Replace 'cat.jpg' with your image file */
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* Header Styles */
+h1 {
+    font-size: 2.5rem; /* Bigger text for the title */
+    margin-bottom: 20px;
+    color: #fff;
+}
